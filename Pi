@@ -1,0 +1,16 @@
+//Вывести на экран число пи 5 раз, в каждой строке разное количество знаков после запятой
+public class Pi {
+
+	
+		
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			System.out.println( String.format("%.1f", Math.PI));
+			System.out.println( String.format("%.2f", Math.PI));
+			System.out.println( String.format("%.3f", Math.PI));
+			System.out.println( String.format("%.4f", Math.PI));
+			System.out.println( String.format("%.5f", Math.PI));
+	}
+	
+
+}
