@@ -1,6 +1,6 @@
 package rdefault;
 
-import java.util.Arrays;      // Импорт масива
+import java.util.Arrays;      // Импорт массива
 import java.util.Scanner;     // Импорт сканнера
                                 // Метод, который принимает массив целых чисел и возвращает максимальное
 
@@ -28,10 +28,10 @@ public class Maximum {
 		}
 	
 			
-			Integer max = Arrays.stream(array)                // Создание стрима
-					             .boxed()					                // Упаковка
+			Integer max = Arrays.stream(array)                              // Создание стрима
+					             .boxed()			        // Упаковка
 					             .max(Integer::compareTo)	        // Сравнение
-				               .get();				               	  // Получение
+				                     .get();				// Получение
 			
 			System.out.println("Максимальное число равно: " + max);	// Вывод на консоль
 	}
