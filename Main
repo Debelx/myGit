@@ -1,0 +1,40 @@
+package rdefault;
+
+import java.util.Scanner;
+
+// Метод, который рисует прямоугольник из плюсиков. Входными параметрами будут два числа - ширина и высота
+
+
+          public class Main {
+        	  
+     public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
+		
+		System.out.print("Введите ширину:  ");		
+		int x = sc.nextInt();						// Объявление переменной x
+		
+		System.out.print("Введите высоту: ");		
+		int y = sc.nextInt();   // Объявление переменной y
+		
+		sc.close();
+			
+		square (x, y);
+
+	
+	}
+	
+                	private static void square (int x, int y) {
+		
+	 for (int i = 0; i < y; i++) {				     // Циклы высоты
+	 for (int j = 0; j < x; j++) {			             // Циклы ширины
+      if (j == 0|j == x - 1|i == 0|i == y - 1) {	
+					System.out.print("+");		               // > Метод, который рисует прямоугольник из плюсиков
+    } else
+					     System.out.print(" ");
+			  }
+			 
+			         System.out.println("");				
+		   }
+	  }
+	
+}
