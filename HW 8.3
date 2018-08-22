@@ -1,0 +1,49 @@
+package rdefault;
+
+import java.io.File;
+import java.util.Arrays;
+import java.io.FilenameFilter;
+
+
+
+
+public class JavaFile {
+
+	 
+	    public static void main(String[] args) {
+	        // будем искать в папке src
+	        String dir = "C:\\Users\\MAXIM\\eclipse-workspace\\HomeWork\\src";
+	        // в этой папке будем искать файлы с расширением .java
+	        String ext = ".java";
+	        // вызываем метод поиска файлов с расширением .java в папке src
+	        findFiles(dir , ext);
+	    }
+	    
+	    // метод поиска
+	    private static void findFiles(String dir, String ext) {
+	        File file = new File(dir);
+	        if(!file.exists()) System.out.println(dir + " папка не существует");
+	        File[] listFiles = file.listFiles(new MyFileNameFilter(ext));
+	        if(listFiles.length == 0){
+	            System.out.println(dir + " не содержит файлов с расширением " + ext);
+	        }else{
+	            for(File f : listFiles)
+	                System.out.println("Файл: " + dir + File.separator + f.getName());
+	        }
+	    }
+	 
+	    // Реализация интерфейса FileNameFilter
+	    public static class MyFileNameFilter implements FilenameFilter{
+	         
+	        private String ext;
+	         
+	        public MyFileNameFilter(String ext){
+	            this.ext = ext.toLowerCase();
+	        }
+	        @Override
+	        public boolean accept(File dir, String name) {
+	            return name.toLowerCase().endsWith(ext);
+	        }
+	    }
+	 
+	}
