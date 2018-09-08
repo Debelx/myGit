@@ -1,0 +1,54 @@
+package rdefault;
+
+class Factorial {
+	// это рекурсивный метод
+	int fact(int n) {
+        int result;
+        
+        	
+           if (n ==1)
+        	   return 1;
+        result = fact(n - 1) * n;
+        return result;
+    }
+}
+
+
+ 
+class Recursion {
+ 
+    public static void main(String args[]) {
+    	
+    		    	    	
+        	
+    	 
+    	
+       
+    	Factorial f = new Factorial();
+    	 for (int n = 0; n < 20; n++) {
+    		 
+    	 
+    	
+
+    	
+    
+	
+    	
+    	System.out.println("Факториал 2 равен " +f.fact(1));
+    	System.out.println("Факториал 2 равен " +f.fact(2));
+    	System.out.println("Факториал 3 равен " +f.fact(3));
+    	System.out.println("Факториал 4 равен " +f.fact(4));
+    	System.out.println("Факториал 5 равен " +f.fact(5));
+    	System.out.println("Факториал 6 равен " +f.fact(6));
+    	System.out.println("Факториал 7 равен " +f.fact(7));
+    	System.out.println("Факториал 8 равен " +f.fact(8));
+    	System.out.println("Факториал 9 равен " +f.fact(9));
+    	System.out.println("Факториал 10 равен " +f.fact(10));
+    	
+    	
+   
+    }
+}
+
+
+}

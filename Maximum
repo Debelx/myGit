@@ -1,0 +1,40 @@
+package rdefault;
+
+import java.util.Arrays;      // Импорт массива
+import java.util.Scanner;     // Импорт сканнера
+                                // Метод, который принимает массив целых чисел и возвращает максимальное
+
+public class Maximum {
+	
+
+
+	public static void main(String[] args) 
+	{
+			Scanner scan = new Scanner(System.in);       // Объявлеие сканнера
+			System.out.println("Введите количество чисел:");
+			
+			int number = scan.nextInt();            // Создание переменной типа int
+			
+					
+			int[] array = new int[number];       // Создание массива
+			
+			System.out.println("Введите число(числа): " );
+			
+			for(int a = 0; a < array.length; a++)      // Наполнение массива элементами
+			{
+				array [a] = scan.nextInt();       // Ввод индекса элемента массива
+				
+				
+		}
+	
+			
+			Integer max = Arrays.stream(array)                              // Создание стрима
+					             .boxed()			        // Упаковка
+					             .max(Integer::compareTo)	        // Сравнение
+				                     .get();				// Получение
+			
+			System.out.println("Максимальное число равно: " + max);	// Вывод на консоль
+	}
+}
+
+	
